@@ -3,15 +3,12 @@ from sklearn import datasets
 from sklearn.model_selection import train_test_split
 from collections import Counter
 
-# -------------------------
+
 # Euclidean Distance Function
-# -------------------------
 def euclidean_distance(x1, x2):
     return np.sqrt(np.sum((x1 - x2) ** 2))
 
-# -------------------------
 # KNN Classifier
-# -------------------------
 class KNNClassifier:
     def __init__(self, k=3):
         self.k = k
@@ -46,9 +43,7 @@ class KNNClassifier:
         most_common_label = label_counts.most_common(1)[0][0]
         return most_common_label
 
-# -------------------------
 # KNN Regressor
-# -------------------------
 class KNNRegressor:
     def __init__(self, k=3):
         self.k = k
